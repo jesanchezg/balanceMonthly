@@ -4,10 +4,12 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var mongoose = require('mongoose');
 
 var appRoutes = require('./routes/app');
 
 var app = express();
+mongoose.connect('mongodb://user:passwd@ds019058.mlab.com:19058/balancepaym');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
