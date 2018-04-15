@@ -1,0 +1,15 @@
+			<article class="panel panel-default" [ngStyle]="{backgroundColor: color}" (mouseenter)="color = 'green'">
+				<div class="panel-body">
+					{{ paymentBlnc }}
+				</div>
+				<footer class="panel-footer">
+					<div class="value">
+						{{ payment.value }}
+					</div>
+					<div class="config">
+						<a href="#" (click)="onEdit()">Edit</a>
+						<a href="#">Delete</a>
+					</div>
+				</footer>
+			</article>
+

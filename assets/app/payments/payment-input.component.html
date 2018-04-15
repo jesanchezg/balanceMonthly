@@ -1,0 +1,28 @@
+<div class="col-md-8 col-md-offset-2">
+	<form (ngSubmit)="onSubmit(f)" #f="ngForm" ngNativeValidate>
+		<div class="form-group">
+			<label for="content">Content </label><br>
+			Value: <input 
+				type="text" 
+				id="content" 
+				class="form-control"
+				ngModel
+				name="value"
+				required>
+			Description: <input 
+				type="text" 
+				id="desc" 
+				class="form-control"
+				ngModel
+				name="desc"
+				required/>
+			Splitted: <input 
+				type="checkbox"
+				id="desc"
+				class="form-control"
+				ngModel
+				name="splitted"/>
+		</div>
+		<button class="btn btn-primary" type="submit">Save</button>
+	</form> 
+</div>
