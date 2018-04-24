@@ -1,5 +1,6 @@
 import { Component, Input, Output, EventEmitter } from "@angular/core";
 import { Payment } from "./payment.model";
+import { PaymentService } from "./payment-service";
 
 @Component({
     selector: 'app-payment',
@@ -26,8 +27,13 @@ export class PaymentComponent {
     
     color = 'red';
     
+    constructor(private paymentService: PaymentService){}
+    
     onEdit(){
         this.editClicked.emit('500');
     }
     
+    onDelete(){
+        this.paymentService.deletePayment(this.payment);
+    }
 }
